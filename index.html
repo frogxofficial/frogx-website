@@ -112,7 +112,24 @@ footer {
     background:#05070a;
     color:#aaa;
 }
+body {
+  background: linear-gradient(135deg, #000000, #001f1a, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
 
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.hero h1 {
+  font-size: 60px;
+  background: linear-gradient(90deg, #00ff88, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 </style>
 </head>
 
