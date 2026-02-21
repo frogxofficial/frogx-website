@@ -184,14 +184,80 @@ footer {
         </div>
     </div>
 </section>
+<section id="whitepaper" style="
+padding:120px 20px;
+text-align:center;
+background:linear-gradient(135deg,#0f2027,#0b0f14);
+position:relative;
+overflow:hidden;
+">
 
-<section id="whitepaper">
-    <div class="container">
-        <h2>Whitepaper</h2>
-        <p>Whitepaper coming soon. Stay tuned for detailed token and ecosystem documentation.</p>
-        <a href="#" class="btn">Download Soon</a>
-    </div>
+<style>
+#whitepaper .glass-box{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,0.05);
+    padding:70px;
+    border-radius:30px;
+    backdrop-filter:blur(25px);
+    box-shadow:0 0 60px rgba(0,255,136,0.2);
+    animation:fadeUp 1.2s ease forwards;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+#whitepaper h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+#whitepaper p{
+    font-size:18px;
+    opacity:0.8;
+    margin-bottom:45px;
+}
+
+#whitepaper .wp-btn{
+    display:inline-block;
+    padding:18px 50px;
+    background:#00ff88;
+    color:#000;
+    font-weight:700;
+    border-radius:60px;
+    text-decoration:none;
+    box-shadow:0 0 30px #00ff88;
+    transition:all 0.4s ease;
+}
+
+#whitepaper .wp-btn:hover{
+    background:#000;
+    color:#00ff88;
+    box-shadow:0 0 50px #00ff88;
+    transform:scale(1.08);
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+
+<div class="glass-box">
+    <h2>📘 Official Whitepaper</h2>
+    <p>
+        Dive deep into the FrogX ecosystem, tokenomics strategy, roadmap 
+        and long-term vision powering the future of meme innovation.
+    </p>
+
+    <a href="FrogX-Whitepaper.pdf" class="wp-btn" download>
+        Download Whitepaper
+    </a>
+</div>
+
 </section>
+
 
 <footer>
     © 2026 FrogX Official. All Rights Reserved.
