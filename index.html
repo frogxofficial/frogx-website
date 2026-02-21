@@ -112,6 +112,7 @@ footer {
     background:#05070a;
     color:#aaa;
 }
+
 body {
   background: linear-gradient(135deg, #000000, #001f1a, #000000);
   background-size: 400% 400%;
@@ -130,6 +131,34 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+nav {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0,255,136,0.2);
+  box-shadow: 0 5px 20px rgba(0,255,136,0.15);
+  z-index: 1000; 
+
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #00ff88;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00ccff;
+}
+    
 </style>
 </head>
 
