@@ -274,8 +274,14 @@ overflow:hidden;
     box-shadow:0 0 60px rgba(0,255,136,0.2);   
     opacity:0;
     transform:translateY(40px);
+    transition: all 0.8s ease;
 }
-
+    
+#whitepaper .glass-box.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+    
 #whitepaper h2{
     font-size:42px;
     margin-bottom:20px;
@@ -332,6 +338,20 @@ overflow:hidden;
 <footer>
     © 2026 FrogX Official. All Rights Reserved.
 </footer>
+    
+<script>
+const box = document.querySelector(".glass-box");
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.2 });
+
+observer.observe(box);
+</script>
+    
 </body>
 </html>
