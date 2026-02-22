@@ -12,10 +12,9 @@ body {
     font-family:'Poppins',sans-serif;
     background: radial-gradient(circle at top, #0f2027, #0b0f14);
     color:white;
-    scroll-behavior:smooth;
+    scroll-behavior:smooth; 
 }
-
-/* Navigation */
+    /* Navigation */
 nav {
     display:flex;
     justify-content:space-between;
@@ -47,6 +46,9 @@ nav a:hover {color:#00ff88;}
     background: linear-gradient(270deg, #001f1f, #001a33, #001f1f);
     background-size: 600% 600%;
     animation: gradientMove 10s ease infinite;
+    
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -183,11 +185,22 @@ nav a {
 nav a:hover {
   color: #00ccff;
 }
-    
+ 
+ #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}   
+
 </style>
 </head>
 
 <body>
+
+<div id="particles-js"></div>
 
 <nav>
     <div><strong>🐸 FrogX</strong></div>
