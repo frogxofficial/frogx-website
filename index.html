@@ -104,7 +104,20 @@ section {
     padding:100px 20px;
     text-align:center;
 }
+    
+.hero h1 {
+  animation: glowText 2s ease-in-out infinite alternate;
+}
 
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 15px rgba(0,255,136,0.4);
+  }
+  to {
+    text-shadow: 0 0 35px rgba(0,255,136,0.9);
+  }
+}
+    
 .container {
     max-width:1100px;
     margin:auto;
