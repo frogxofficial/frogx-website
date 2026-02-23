@@ -443,6 +443,10 @@ observer.observe(box);
 <script>
 const counters = document.querySelectorAll('.counter');
 
+function formatNumber(num) {
+  return num.toLocaleString();
+}
+
 const counterObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -451,13 +455,14 @@ const counterObserver = new IntersectionObserver(entries => {
       const increment = target / 200;
 
       const updateCounter = () => {
-        const c = +counter.innerText;
+        const current = +counter.innerText.replace(/,/g, '');
 
-        if (c < target) {
-          counter.innerText = Math.ceil(c + increment);
+        if (current < target) {
+          counter.innerText = formatNumber(Math.ceil(current + increment));
           setTimeout(updateCounter, 10);
         } else {
-          counter.innerText = target;
+          counter.innerText = formatNumber(target);
+          counter.classList.add("counter-finish");
         }
       };
 
@@ -471,7 +476,7 @@ counters.forEach(counter => {
   counter.innerText = '0';
   counterObserver.observe(counter);
 });
-</script>    
+</script>
 
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
