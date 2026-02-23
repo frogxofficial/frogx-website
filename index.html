@@ -451,7 +451,6 @@ particlesJS("particles-js", {
 </script>   
 
 <script>
-const box = document.querySelector(".glass-box");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -461,7 +460,12 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 
-observer.observe(box);
+const boxes = document.querySelectorAll(".glass-box");
+
+boxes.forEach(box => {
+    observer.observe(box);
+});
+
 </script>
 
 <script>
