@@ -108,9 +108,27 @@ section {
     padding:100px 20px;
     text-align:center;
 }
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 42px;
+    color: #00ff88;
+}
     
 .hero h1 {
-  animation: glowText 2s ease-in-out infinite alternate;
+    animation: glowText 2s ease-in-out infinite alternate;
 }
 
 @keyframes glowText {
@@ -152,8 +170,9 @@ section {
 }
     
 .counter-finish {
-  text-shadow: 0 0 15px #00ff88;
-  transition: 0.5s ease;
+    text-shadow: 0 0 15px #00ff88,
+                 0 0 30px #00ff88;
+    transition: 0.5s ease;
 }
     
 .card h2 {
