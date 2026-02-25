@@ -237,7 +237,71 @@ nav a:hover {
   left: 0;
   z-index: 0;
 }   
+    
+ #whitepaper {
+   padding:120px 20px;
+   text-align:center;
+   background:linear-gradient(135deg,#0f2027,#0b0f14);
+   position:relative;
+   overflow:hidden;
+ }
+    
+#whitepaper .glass-box{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,0.05);
+    padding:70px;
+    border-radius:30px;
+    backdrop-filter:blur(25px);
+    box-shadow:0 0 60px rgba(0,255,136,0.2);   
+    opacity:0;
+    transform:translateY(40px);
+    transition: all 0.8s ease;
+}
+    
+#whitepaper .glass-box.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+    
+#whitepaper h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
 
+#whitepaper p{
+    font-size:18px;
+    opacity:0.8;
+    margin-bottom:45px;
+}
+
+#whitepaper .wp-btn{
+    display:inline-block;
+    padding:18px 50px;
+    background:#00ff88;
+    color:#000;
+    font-weight:700;
+    border-radius:60px;
+    text-decoration:none;
+    box-shadow:0 0 30px #00ff88;
+    transition:all 0.4s ease;
+}
+
+#whitepaper .wp-btn:hover{
+    background:#000;
+    color:#00ff88;
+    box-shadow:0 0 50px #00ff88;
+    transform:scale(1.08);
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+    
 </style>
 </head>
 
@@ -330,73 +394,11 @@ nav a:hover {
         </div>
     </div>
 </section>
-    
-<section id="whitepaper" style="
-padding:120px 20px;
-text-align:center;
-background:linear-gradient(135deg,#0f2027,#0b0f14);
-position:relative;
-overflow:hidden;
-">
 
-<style>
-#whitepaper .glass-box{
-    max-width:900px;
-    margin:auto;
-    background:rgba(255,255,255,0.05);
-    padding:70px;
-    border-radius:30px;
-    backdrop-filter:blur(25px);
-    box-shadow:0 0 60px rgba(0,255,136,0.2);   
-    opacity:0;
-    transform:translateY(40px);
-    transition: all 0.8s ease;
-}
-    
-#whitepaper .glass-box.show {
-   opacity: 1;
-   transform: translateY(0);
-}
-    
-#whitepaper h2{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-#whitepaper p{
-    font-size:18px;
-    opacity:0.8;
-    margin-bottom:45px;
-}
-
-#whitepaper .wp-btn{
-    display:inline-block;
-    padding:18px 50px;
-    background:#00ff88;
-    color:#000;
-    font-weight:700;
-    border-radius:60px;
-    text-decoration:none;
-    box-shadow:0 0 30px #00ff88;
-    transition:all 0.4s ease;
-}
-
-#whitepaper .wp-btn:hover{
-    background:#000;
-    color:#00ff88;
-    box-shadow:0 0 50px #00ff88;
-    transform:scale(1.08);
-}
-
-@keyframes fadeUp{
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-</style>
+<section id="whitepaper">
 
 <div class="glass-box">
+    
     <h2>📘 Official Whitepaper</h2>
     <p>
         Dive deep into the FrogX ecosystem, tokenomics strategy, roadmap 
@@ -409,7 +411,6 @@ overflow:hidden;
 </div>
 
 </section>
-
 
 <footer>
     © 2026 FrogX Official. All Rights Reserved.
